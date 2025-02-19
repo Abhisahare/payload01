@@ -1,5 +1,7 @@
 import type { CollectionConfig } from 'payload'
 
+
+
 export const Media: CollectionConfig = {
   slug: 'media',
   access: {
@@ -14,3 +16,25 @@ export const Media: CollectionConfig = {
   ],
   upload: true,
 }
+const Posts: CollectionConfig = {
+  slug: 'posts',
+  fields: [
+    {
+      name: 'title',
+      type: 'text',
+      
+      required: true,
+    },
+    {
+      name: 'content',
+      type: 'richText',
+    },
+    {
+      name: 'author',
+      type: 'relationship',
+      relationTo: 'users',
+    },
+  ],
+};
+
+export default Posts;
