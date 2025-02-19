@@ -324,8 +324,3 @@ export interface Auth {
 declare module 'payload' {
   export interface GeneratedTypes extends Config {}
 }
-interface posts {
-  title: string;
-  content: string;
-}
-
